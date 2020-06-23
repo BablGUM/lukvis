@@ -44,7 +44,7 @@ class ServicesController extends Controller
     public function show($id)
     {
         $data = [
-            'product' => Service::findOrFail($id),
+            'services' => Service::findOrFail($id),
             'image' => Image::where('services_id',$id)->get('path_to'),
         ];
         return response()->json($data);
