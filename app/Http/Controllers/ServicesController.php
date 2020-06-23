@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\CategoryService;
+use App\Image;
 use App\Service;
 use Illuminate\Support\Arr;
 
@@ -44,7 +45,7 @@ class ServicesController extends Controller
     {
         $data = [
             'product' => Service::findOrFail($id),
-            'image' => '',
+            'image' => Image::where('services_id',$id)->get('path_to'),
         ];
         return response()->json($data);
     }
