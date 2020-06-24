@@ -13,6 +13,7 @@ class CategoryService extends Model
         'path_to',
 
     ];
+
     public function service()
     {
         return $this->hasMany('App\Service','category_services_id','id');

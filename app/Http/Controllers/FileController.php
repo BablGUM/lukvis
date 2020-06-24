@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;
 
 class FileController extends Controller
@@ -34,5 +35,7 @@ class FileController extends Controller
 
         return response()->file(public_path($request->link));
     }
+
+
 
 }
