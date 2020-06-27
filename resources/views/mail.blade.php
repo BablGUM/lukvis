@@ -10,7 +10,7 @@
 ФИО заказчика: {{ $full_name }}
 <br>
 <br>
-Телефон: {{ $phone }}
+Телефон: +7{{ $phone }}
 <br>
 <br>
 E-mail: {{ $email }}
