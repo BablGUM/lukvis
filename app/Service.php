@@ -27,4 +27,8 @@ class Service extends Model
         return $this->belongsTo(CategoryService::class);
     }
 
+    public function imagesShow()
+    {
+        return $this->hasMany('App\Image');
+    }
 }

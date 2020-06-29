@@ -25,10 +25,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        $data = [
-            'product' => Product::findOrFail($id),
-            'image' => Image::where('product_id',$id)->get('path_to'),
-        ];
+       $data = Product::with('imagesShow')->find($id);
         return response()->json($data);
     }
 

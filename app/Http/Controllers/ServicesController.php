@@ -26,10 +26,8 @@ class ServicesController extends Controller
      */
     public function show($id)
     {
-        $data = [
-            'services' => Service::findOrFail($id),
-            'image' => Image::where('services_id',$id)->get('path_to'),
-        ];
+        $data = Service::with('imagesShow')->find($id);
+
         return response()->json($data);
     }
 
